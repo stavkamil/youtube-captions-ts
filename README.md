@@ -1,6 +1,10 @@
-# youtube-captions-ts
+![Youtube Captions TS Logo](public/logo.png)
 
 TypeScript library for fetching and parsing YouTube video captions with full type safety.
+
+![npm](https://img.shields.io/npm/v/youtube-captions-ts)
+![install size](https://packagephobia.com/badge?p=youtube-captions-ts)
+![downloads](https://img.shields.io/npm/dm/youtube-captions-ts)
 
 ## Installation
 
