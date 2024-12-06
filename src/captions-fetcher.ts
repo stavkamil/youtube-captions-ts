@@ -57,11 +57,9 @@ export class CaptionsFetcher {
 
   private async fetchVideoHtml(videoId: string): Promise<string> {
     try {
-      console.log(`Fetching video HTML for videoId: ${videoId}`);
       const response = await this.httpClient.get(`${this.WATCH_URL}${videoId}`);
       return response.data;
     } catch (error) {
-      console.error(`Error fetching video HTML: ${(error as Error).message}`);
       throw new VideoNotFoundError(videoId);
     }
   }
