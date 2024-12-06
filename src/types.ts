@@ -1,5 +1,5 @@
 export interface CaptionsOptions {
-  languages?: string[]; // e.g., ['en', 'es'] - will try in order
+  languages?: string[];
 }
 
 export interface CaptionSegment {

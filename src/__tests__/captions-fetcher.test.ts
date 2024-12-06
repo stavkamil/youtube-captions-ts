@@ -27,7 +27,6 @@ vi.mock('axios', () => {
 
 describe('CaptionsFetcher', () => {
   const videoId = 'testVideoId';
-
   let captionsFetcher: CaptionsFetcher;
 
   beforeEach(() => {
@@ -140,3 +139,5 @@ describe('CaptionsFetcher', () => {
     );
   });
 });
+
+// to be more tests...

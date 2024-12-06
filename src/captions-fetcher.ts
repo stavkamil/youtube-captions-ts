@@ -29,7 +29,7 @@ export class CaptionsFetcher {
     });
   }
 
-  async getTranscript(videoId: string, options: CaptionsOptions = {}): Promise<Captions> {
+  async getCaptions(videoId: string, options: CaptionsOptions = {}): Promise<Captions> {
     const finalOptions = {
       languages: ['en'],
       ...options,
@@ -46,7 +46,7 @@ export class CaptionsFetcher {
       throw new NoCaptionsError(videoId, finalOptions.languages);
     }
 
-    const transcript = await this.fetchTranscriptContent(track);
+    const transcript = await this.fetchCaptionsContent(track);
 
     return {
       segments: transcript,
@@ -109,11 +109,11 @@ export class CaptionsFetcher {
     return null;
   }
 
-  private async fetchTranscriptContent(track: CaptionTrack): Promise<CaptionSegment[]> {
+  private async fetchCaptionsContent(track: CaptionTrack): Promise<CaptionSegment[]> {
     const response = await this.httpClient.get(track.baseUrl);
     const parsed = this.xmlParser.parse(response.data);
 
-    return this.parseTranscriptXml(parsed);
+    return this.parseCaptions(parsed);
   }
 
   private cleanText(text: string, preserveFormatting: boolean = false): string {
@@ -124,7 +124,7 @@ export class CaptionsFetcher {
     return decodeHtmlEntities(text);
   }
 
-  private parseTranscriptXml(data: any): CaptionSegment[] {
+  private parseCaptions(data: any): CaptionSegment[] {
     const transcript = data.transcript;
     if (!transcript || !transcript.text) {
       return [];
