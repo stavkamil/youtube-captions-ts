@@ -1,6 +1,30 @@
 {
   "name": "youtube-captions-ts",
   "version": "0.1.0",
+  "description": "A TypeScript library for fetching YouTube captions",
+  "author": "Stav Kamil",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/stavkamil/youtube-captions-ts/issues"
+  },
+  "homepage": "https://github.com/stavkamil/youtube-captions-ts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stavkamil/youtube-captions-ts.git"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "youtube",
+    "captions",
+    "transcript",
+    "subtitles",
+    "typescript"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "npx ts-node src/index.ts",

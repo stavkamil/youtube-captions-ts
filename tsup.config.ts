@@ -1,10 +1,8 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  clean: true,
   entry: ['src/index.ts'],
-  format: ['esm'],
-  target: 'esnext',
-  outDir: 'dist',
-  watch: true,
+  format: ['cjs', 'esm'],
+  dts: true,
+  clean: true,
 });
