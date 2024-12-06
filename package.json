@@ -1,7 +1,6 @@
 {
-  "name": "express-typescript-api",
-  "version": "1.0.0",
-  "private": true,
+  "name": "youtube-captions-ts",
+  "version": "0.1.0",
   "scripts": {
     "build": "tsup",
     "dev": "npx ts-node src/index.ts",
